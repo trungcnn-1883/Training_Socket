@@ -16,7 +16,7 @@ Dữ liệu ghi vào luồng đầu ra trên Socket của client sẽ nhận đ�
 
 - **Tại phía server**: thông thường, một chương trình server chạy trên một máy tính cụ thể và có một cái cổng (**socket**) kết nối với một **port** cụ thể. Các chương trình đợi, lắng nghe tại socket để các client thực hiện yêu cầu kết nối. 
 
-- **Tại phía client**: clien biết tên của máy chủ mà server đang chạy (thường đó là địa chỉ IP) và số cổng server đang lắng nghe. Các thông tin này cần cho việc kết nối. Client cũng phải tự định danh chính nó với server để gắn một cổng địa phương cái sẽ được sử dụng trong suốt quá trình kết nối này, thông thường nó được gán bởi hệ điều hành. 
+- **Tại phía client**: clien biết tên của máy chủ mà server đang chạy (thường đó là địa chỉ IP, tên miền hoặc localhost, ...) và số cổng server đang lắng nghe. Các thông tin này cần cho việc kết nối. Client cũng phải tự định danh chính nó với server để gắn một cổng địa phương cái sẽ được sử dụng trong suốt quá trình kết nối này, thông thường nó được gán bởi hệ điều hành. 
 
 Hình minh họa
 
@@ -26,6 +26,22 @@ Hình minh họa
 
 Phía Client, nếu kết nối được chấp nhận, một ổ cắm được tạo thành công và Client có thể sử dụng ổ cắm để giao tiếp với chương trình chủ.
 <img src="https://o7planning.org/vi/10393/cache/images/i/766756.png"/>
+
+### 3. Phân loại
+
+### a. Stream socket - socket hướng kết nối
+
+Dựa trên giao thức TCP, thiết lập giao tiếp 2 chiều theo mô hình Client - Server. Việc truyền dữ liệu chỉ thực hiện giữa 2 quá trình đã thiết lập kết nối. 
+
+<img src="https://topdev.vn/blog/wp-content/uploads/2019/06/tcp.jpg" />
+
+Đặc điểm:
+
+- Đảm bảo dữ liệu được truyền đến nơi 1 cách tin cậy, đúng tuần tự
+
+- Một trong hai tiến trình phải đợi bên kia yêu cầu kết nối - thiết lập kết nối, sau đó
+
+- Mỗi thông điệp phải có xác nhận trả về
 
 
 
