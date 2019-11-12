@@ -80,6 +80,8 @@ Sử dụng: cho các ứng dụng cần tốc độ nhanh, độ chính xác, t
 
 - DNS, VoIP (truyển giọng nói)
 
+### 4. Websocket là gì ?
+
 
 
 
