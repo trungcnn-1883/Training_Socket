@@ -31,17 +31,57 @@ Phía Client, nếu kết nối được chấp nhận, một ổ cắm được
 
 ### a. Stream socket - socket hướng kết nối
 
-Dựa trên giao thức TCP, thiết lập giao tiếp 2 chiều theo mô hình Client - Server. Việc truyền dữ liệu chỉ thực hiện giữa 2 quá trình đã thiết lập kết nối. 
+Dựa trên giao thức TCP, thiết lập giao tiếp 2 chiều theo mô hình Client - Server. Việc truyền dữ liệu chỉ thực hiện giữa 2 quá trình đã thiết lập kết nối. Cơ chế phức tạp để quản lý luồng, chống tắc nghẽn.
 
 <img src="https://topdev.vn/blog/wp-content/uploads/2019/06/tcp.jpg" />
 
 Đặc điểm:
 
+- Có một kênh giao tiếp ảo giữa hai bên giao tiếp (handshake)
+
 - Đảm bảo dữ liệu được truyền đến nơi 1 cách tin cậy, đúng tuần tự
 
-- Một trong hai tiến trình phải đợi bên kia yêu cầu kết nối - thiết lập kết nối, sau đó
+- Một trong hai tiến trình phải đợi bên kia yêu cầu kết nối - thiết lập kết nối, sau đó mới có thể trao đổi dữ liệu giữa hai bên
 
-- Mỗi thông điệp phải có xác nhận trả về
+- Mỗi thông điệp phải có xác nhận trả về, có lỗi sẽ được thông báo
+
+Sử dụng: cho các ứng dụng cần độ tin cậy, chính xác cao
+
+- HTTP, HTTPS
+
+- SSH
+
+- FTP: truyền file
+
+- Email: SMTP, IMAP/POP
+
+
+### b. Datagram Socket - socket không hướng kết nối
+
+Dựa trên giao thức UDP, truyền dữ liệu không yêu cầu sự thiết lập kết nối giữa 2 process. 
+
+<img src="https://topdev.vn/blog/wp-content/uploads/2019/06/udp.jpg"/>
+
+Đặc điểm:
+
+- Không có kênh giao tiếp ảo giữa hai bên giao tiếp (không có handshake)
+
+- Do không yêu cầu thiết lập kết nối, cơ chế đơn giản nên tốc độ nhanh
+
+- Không đảm bảo dữ liệu có thế đến bên nhận, dữ liệu đến có thể không tuần tự, bị mất mát
+
+- 
+
+Sử dụng: cho các ứng dụng cần tốc độ nhanh, độ chính xác, tin cậy không cần cao
+
+- Online game, chat
+
+- Video trực tuyến
+
+- DNS, VoIP (truyển giọng nói)
+
+
+
 
 
 
