@@ -82,7 +82,39 @@ Sử dụng: cho các ứng dụng cần tốc độ nhanh, độ chính xác, t
 
 ### 4. Websocket là gì ?
 
+### a. Tại sao cần Websocket ?
 
+Hiện tại có nhiều phương thức để client - server có thể giao tiếp được với nhau, ví dụ chúng là:
+
+- Ajax polling: client gửi request liên tục sau 1 khoảng thời gian lên cho server. Điều này bắt server trả về dữ liệu dù có dữ liệu mới hay không => Lãng phí băng thông, thời gian
+
+- Ajax long polling: đầu tiên client vẫn request lên cho server. Nhưng server đợi có dữ liệu mới hoặc hết time out mới trả về dữ liệu cho client. Sau đó ngay lập tức lặp lại quy trình trên. ==> Tiết kiệm băng thông, tài nguyên tiêu thụ.
+
+- HTML5 Server Sent Event (SSE): chỉ client gửi request lên server. Kể từ lúc này  server sẽ gửi response trả về cho client khi có dữ liệu mới. Client không cần request lại thêm lần nào. 
+
+Ngoài ra còn có Comet.
+
+Đặc điểm chung của các phương thức trên là đều sử dụng HTTP. Nhược điểm của nó là chứa nhiều dữ liệu không cần thiết trong header. Ví dụ một header của HTTP khoảng 871 byte, thì websocket chỉ có 2 byte.
+
+Không hỗ trợ đồng song song giữa client và server: polling, long polling - cả client và server đều có thể gửi và nhận request cùng một thời điểm.
+
+=> Tiết kiệm được băng thông rất, rất nhiều.
+
+### b. Giới thiệu
+
+Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và server:
+
+- Sử dụng 1 TCP socket để tạo 1 kết nối - hiệu quả và ít tốm kém hơn HTTP
+
+- Là một kĩ thuật Reverse Ajax. Cho phép các kênh giao tiếp song song hai chiều và hiện đã hỗ trợ nhiều trình duyệt. 
+
+- Hỗ trợ chuẩn giao thức mới ws:// và wss:// (tương tự http:// và https://)
+
+- Chuẩn giao tiếp là String, hiện đã có buffered arrays (protobuf) và blobs (Binary request). Chưa hỗ trợ JSON
+
+- Như đã nói ở phần 1 thì phần header sẽ nhỏ hơn, có thể tới 500 - 1000 lần.
+
+- Giúp giảm độ trễ network lên đến 3 lần
 
 
 
