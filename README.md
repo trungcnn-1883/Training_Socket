@@ -116,6 +116,10 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 
 - Giúp giảm độ trễ network lên đến 3 lần
 
+### c. Hoạt động
+
+
+
 
 
 
