@@ -96,9 +96,9 @@ Ngoài ra còn có Comet.
 
 Đặc điểm chung của các phương thức trên là đều sử dụng HTTP. Nhược điểm của nó là chứa nhiều dữ liệu không cần thiết trong header. Ví dụ một header của HTTP khoảng 871 byte, thì websocket chỉ có 2 byte.
 
-Không hỗ trợ đồng song song giữa client và server: polling, long polling - cả client và server đều có thể gửi và nhận request cùng một thời điểm.
-
 => Tiết kiệm được băng thông rất, rất nhiều.
+
+Không hỗ trợ đồng song song giữa client và server: polling, long polling - giúp cả client và server đều có thể gửi và nhận request cùng một thời điểm.
 
 ### b. Giới thiệu
 
@@ -117,6 +117,23 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 - Giúp giảm độ trễ network lên đến 3 lần
 
 ### c. Hoạt động
+
+### d. Ưu/nhược điểm
+
+Ưu điểm
+
+WebSockets cung cấp khả năng giao tiếp hai chiều mạnh mẽ, có độ trễ thấp và dễ xử lý lỗi. Không cần phải có nhiều kết nối như phương pháp Comet long-polling và cũng không có những nhược điểm như Comet streaming.
+API cũng rất dễ sử dụng trực tiếp mà không cần bất kỳ các tầng bổ sung nào, so với Comet, thường đòi hỏi một thư viện tốt để xử lý kết nối lại, thời gian chờ timeout, các Ajax request (yêu cầu Ajax), các tin báo nhận và các dạng truyền tải tùy chọn khác nhau (Ajax long-polling và jsonp polling).
+Nhược điểm
+
+Những nhược điểm của WebSockets gồm có:
+
+Nó là một đặc tả mới của HTML5, nên nó vẫn chưa được tất cả các trình duyệt hỗ trợ.
+Không có phạm vi yêu cầu nào. Do WebSocket là một TCP socket chứ không phải là HTTP request, nên không dễ sử dụng các dịch vụ có phạm vi-yêu cầu, như SessionInViewFilter của Hibernate. Hibernate là một framework kinh điển cung cấp một bộ lọc xung quanh một HTTP request. Khi bắt đầu một request, nó sẽ thiết lập một contest (chứa các transaction và liên kết JDBC) được ràng buộc với luồng request. Khi request đó kết thúc, bộ lọc hủy bỏ contest này.
+
+
+
+
 
 
 
