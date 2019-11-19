@@ -92,13 +92,11 @@ Hiện tại có nhiều phương thức để client - server có thể giao ti
 
 - HTML5 Server Sent Event (SSE): chỉ client gửi request lên server. Kể từ lúc này  server sẽ gửi response trả về cho client khi có dữ liệu mới. Client không cần request lại thêm lần nào. 
 
-Ngoài ra còn có Comet.
+ Ngoài ra còn có Comet.
 
-Đặc điểm chung của các phương thức trên là đều sử dụng HTTP. Nhược điểm của nó là chứa nhiều dữ liệu không cần thiết trong header. Ví dụ một header của HTTP khoảng 871 byte, thì websocket chỉ có 2 byte.
+ Đặc điểm chung của các phương thức trên là đều sử dụng HTTP. Nhược điểm của nó là chứa nhiều dữ liệu không cần thiết trong header. Ví dụ một header của HTTP khoảng 871 byte, thì websocket chỉ có 2 byte.
 
-=> Tiết kiệm được băng thông rất, rất nhiều.
-
-Không hỗ trợ đồng song song giữa client và server: polling, long polling - giúp cả client và server đều có thể gửi và nhận request cùng một thời điểm, chỉ khi có request từ client, server mới hoạt động và trả kết quả về, còn lại thì server ko làm gì cả
+ Ajax polling, long polling không hỗ trợ đồng song song giữa client và server:  - giúp cả client và server đều có thể gửi và nhận request cùng một thời điểm. Chỉ khi có request từ client, server mới hoạt động và trả kết quả về, còn lại thì server ko làm gì cả
 
 
 ### b. Giới thiệu
@@ -121,11 +119,11 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 
 <img src="https://techmaster.vn/media/fileman/Uploads/ImageBlog/ky-thuat-lap-trinh-web-regular-http-13122015-socket.png">
 
-1. Clien gửi yêu cầu để hiển thị 1 trang web từ server 
+1. Client gửi yêu cầu để hiển thị 1 trang web từ server 
 
 2. Trang web mà client yêu cầu mở một kết nối tới server
 
-3. Bây giờ cả client v
+3. Server đồng ý kết nối. Bây giờ cả client với server đều có thể gửi và nhận dữ liệu vs nhau khi có dữ liệu mới
 
 ### d. Ưu/nhược điểm
 
