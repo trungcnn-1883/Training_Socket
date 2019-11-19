@@ -125,6 +125,8 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 
 3. Server đồng ý kết nối. Bây giờ cả client với server đều có thể gửi và nhận dữ liệu vs nhau khi có dữ liệu mới
 
+<img src="https://topdev.vn/blog/wp-content/uploads/2019/06/websocket-la-gi.png">
+
 ### d. Ưu/nhược điểm
 
 Ưu điểm
@@ -137,6 +139,8 @@ Những nhược điểm của WebSockets gồm có:
 
 Nó là một đặc tả mới của HTML5, nên nó vẫn chưa được tất cả các trình duyệt hỗ trợ.
 Không có phạm vi yêu cầu nào. Do WebSocket là một TCP socket chứ không phải là HTTP request, nên không dễ sử dụng các dịch vụ có phạm vi-yêu cầu, như SessionInViewFilter của Hibernate. Hibernate là một framework kinh điển cung cấp một bộ lọc xung quanh một HTTP request. Khi bắt đầu một request, nó sẽ thiết lập một contest (chứa các transaction và liên kết JDBC) được ràng buộc với luồng request. Khi request đó kết thúc, bộ lọc hủy bỏ contest này.
+
+----------------------- n
 
 tcp: data packet - byte
 chứa thông tin data, nhận dữ liệu hay chưa
