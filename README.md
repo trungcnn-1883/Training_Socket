@@ -119,7 +119,7 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 
 ### c. Hoạt động
 
-<img src="https://techmaster.vn/media/fileman/Uploads/ImageBlog/ky-thuat-lap-trinh-web-regular-http-13122015-socket.png">
+<img src="https://topdev.vn/blog/wp-content/uploads/2019/06/websocket-la-gi.png">
 
 1. Client gửi yêu cầu để hiển thị 1 trang web từ server 
 
@@ -127,7 +127,7 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 
 3. Server đồng ý kết nối. Bây giờ cả client với server đều có thể gửi và nhận dữ liệu vs nhau khi có dữ liệu mới
 
-<img src="https://topdev.vn/blog/wp-content/uploads/2019/06/websocket-la-gi.png">
+<img src="https://techmaster.vn/media/fileman/Uploads/ImageBlog/ky-thuat-lap-trinh-web-regular-http-13122015-socket.png">
 
 ### d. Ưu/nhược điểm
 
@@ -135,6 +135,7 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 
 WebSockets cung cấp khả năng giao tiếp hai chiều mạnh mẽ, có độ trễ thấp và dễ xử lý lỗi. Không cần phải có nhiều kết nối như phương pháp Comet long-polling và cũng không có những nhược điểm như Comet streaming.
 API cũng rất dễ sử dụng trực tiếp mà không cần bất kỳ các tầng bổ sung nào, so với Comet, thường đòi hỏi một thư viện tốt để xử lý kết nối lại, thời gian chờ timeout, các Ajax request (yêu cầu Ajax), các tin báo nhận và các dạng truyền tải tùy chọn khác nhau (Ajax long-polling và jsonp polling).
+
 Nhược điểm
 
 Những nhược điểm của WebSockets gồm có:
