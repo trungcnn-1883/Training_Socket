@@ -98,7 +98,8 @@ Ngoài ra còn có Comet.
 
 => Tiết kiệm được băng thông rất, rất nhiều.
 
-Không hỗ trợ đồng song song giữa client và server: polling, long polling - giúp cả client và server đều có thể gửi và nhận request cùng một thời điểm.
+Không hỗ trợ đồng song song giữa client và server: polling, long polling - giúp cả client và server đều có thể gửi và nhận request cùng một thời điểm, chỉ khi có request từ client, server mới hoạt động và trả kết quả về, còn lại thì server ko làm gì cả
+
 
 ### b. Giới thiệu
 
@@ -117,6 +118,14 @@ Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và se
 - Giúp giảm độ trễ network lên đến 3 lần
 
 ### c. Hoạt động
+
+<img src="https://techmaster.vn/media/fileman/Uploads/ImageBlog/ky-thuat-lap-trinh-web-regular-http-13122015-socket.png">
+
+1. Clien gửi yêu cầu để hiển thị 1 trang web từ server 
+
+2. Trang web mà client yêu cầu mở một kết nối tới server
+
+3. Bây giờ cả client v
 
 ### d. Ưu/nhược điểm
 
