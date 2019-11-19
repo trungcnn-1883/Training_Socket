@@ -103,7 +103,7 @@ Hiện tại có nhiều phương thức để client - server có thể giao ti
 
 Websocket là công nghệ hỗ trợ giao tiếp 2 chiều giữa client và server:
 
-- Sử dụng 1 TCP socket để tạo 1 kết nối - hiệu quả và ít tốm kém hơn HTTP
+- Không sử dụng HTTP, mà sử dụng 1 TCP socket để tạo 1 kết nối, truyền dữ liệu qua chiệu quả và ít tốm kém hơn HTTP
 
 - Là một kĩ thuật Reverse Ajax. Cho phép các kênh giao tiếp song song hai chiều và hiện đã hỗ trợ nhiều trình duyệt. 
 
@@ -138,6 +138,10 @@ Những nhược điểm của WebSockets gồm có:
 Nó là một đặc tả mới của HTML5, nên nó vẫn chưa được tất cả các trình duyệt hỗ trợ.
 Không có phạm vi yêu cầu nào. Do WebSocket là một TCP socket chứ không phải là HTTP request, nên không dễ sử dụng các dịch vụ có phạm vi-yêu cầu, như SessionInViewFilter của Hibernate. Hibernate là một framework kinh điển cung cấp một bộ lọc xung quanh một HTTP request. Khi bắt đầu một request, nó sẽ thiết lập một contest (chứa các transaction và liên kết JDBC) được ràng buộc với luồng request. Khi request đó kết thúc, bộ lọc hủy bỏ contest này.
 
+tcp: data packet - byte
+chứa thông tin data, nhận dữ liệu hay chưa
+
+http: sử dụng http message, cách đọc và xử lý data khi nó đến
 
 
 
