@@ -8,7 +8,7 @@ Socket là một điểm cuối (end-point) của liên kết truyền thông ha
 
 Các lớp Socket được sử dụng để biểu diễn kết nối giữa client và server, được ràng buộc với một cổng port (thể hiện là một con số cụ thể) để các tầng TCP (TCP Layer) có thể định danh ứng dụng mà dữ liệu sẽ được gửi tới. 
 
-Dữ liệu sẽ được truyền dưới dạng packet, các gói tin.
+Dữ liệu sẽ được truyền dưới dạng packet - các gói tin.
 
 Dữ liệu ghi vào luồng đầu ra trên Socket của client sẽ nhận được trên luồng đầu vào của Socket tại Server. Và ngược lại dữ liệu ghi vào luồng đầu ra trên Socket của Server sẽ nhận được trên luồng đầu vào của Socket tại Client.
 
